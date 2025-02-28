@@ -1,62 +1,64 @@
 # Library Management System
 
-## Overview
-This is a Library Management System built using Python 3.11. It consists of a Flask backend and a Streamlit frontend.
+## **Programming Language:** Python (3.11)
 
-## Prerequisites
-- Python 3.11
-- Required libraries (listed in `requirements.txt`)
+## **Project Setup and Execution**
+To run the project, follow these steps:
 
-## Installation and Setup
+### **1. Download and Navigate to Project Directory**
+- Download the project ZIP file.
+- Extract it and navigate to the project folder in the command prompt.
 
-### 1. Download and Extract the Project
-- Download the ZIP file and extract it.
-- Navigate to the project directory.
-
-### 2. Install Required Libraries
-Run the following command to install dependencies:
-
-```
+### **2. Install Required Libraries**
+Before running the project, install all the required dependencies:
+```sh
 pip install -r requirements.txt
 ```
 
-If any required libraries are missing, install them individually using:
+### **3. Running the Backend**
+The backend runs on Flask and should be executed in a virtual environment.
 
-```
-pip install [library_name]
-```
-
-### 3. Run the Backend (Flask Server)
-1. Open **Command Prompt 1** and navigate to the project folder.
-2. Activate the virtual environment:
-
-```
-.\Scriptsctivate.bat
+#### **Step 3.1: Activate Virtual Environment**
+Open **Command Prompt 1**, navigate to the project directory, and activate the virtual environment:
+```sh
+.\Scripts\activate.bat
 ```
 
-3. Start the Flask application:
-
-```
+#### **Step 3.2: Run Flask Application**
+Once inside the virtual environment, start the Flask backend by running:
+```sh
 flask --app app run
 ```
+This will start the backend server.
 
-### 4. Run the Frontend (Streamlit)
-1. Open **Command Prompt 2** and navigate to the project folder.
-2. Activate the virtual environment:
+### **4. Running the Frontend**
+The frontend is built using **Streamlit** and should be executed in a separate command prompt.
 
+#### **Step 4.1: Activate Virtual Environment**
+Open **Command Prompt 2**, navigate to the project directory, and activate the virtual environment:
+```sh
+.\Scripts\activate.bat
 ```
-.\Scriptsctivate.bat
-```
 
-3. Run the Streamlit application:
-
-```
+#### **Step 4.2: Start the Streamlit App**
+Once inside the virtual environment, start the frontend using Streamlit:
+```sh
 streamlit run login.py --client.showSidebarNavigation=False
 ```
 
-## Notes
-- Ensure you run both the backend and frontend in separate command prompts.
-- If you encounter missing dependencies, install them manually as mentioned above.
+## **Project Structure**
+```
+📂 Library-Management-System
+ ├── 📜 app.py             # Flask Backend Application
+ ├── 📜 login.py           # Streamlit Frontend Application
+ ├── 📜 requirements.txt   # Required Libraries
+ ├── 📂 Scripts            # Virtual Environment Scripts
+ ├── 📂 templates          # HTML Templates (If applicable)
+ ├── 📂 static             # Static Files (CSS, JS, Images)
+```
 
-## License
-This project is open-source and can be modified as needed.
+### **Notes:**
+- Ensure both frontend and backend are running simultaneously.
+- If any issues occur, check that dependencies are correctly installed and virtual environments are activated.
+
+This setup should allow you to successfully run the Library Management System. 🚀
