@@ -1,0 +1,49 @@
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS books;
+DROP TABLE IF EXISTS authors;
+DROP TABLE IF EXISTS loans;
+DROP TABLE IF EXISTS feedback;
+
+CREATE TABLE users (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	username TEXT UNIQUE NOT NULL,
+	PASSWORD TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE authors (
+	author_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name TEXT NOT NULL
+);
+
+CREATE TABLE books (
+	book_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	bookname TEXT NOT NULL,
+	publisher TEXT,
+	rating FLOAT,
+	author_id INTEGER NOT NULL,
+	FOREIGN KEY (author_id) REFERENCES authors (author_id)
+);
+
+CREATE TABLE loans (
+	loan_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	borrowed_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	returned BOOLEAN,
+	book_id INTEGER NOT NULL,
+	user_id INTEGER NOT NULL,
+	FOREIGN KEY (user_id) REFERENCES users (id),
+	FOREIGN KEY (book_id) REFERENCES books (book_id)
+);
+
+CREATE TABLE feedback(
+	review_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	review TEXT,
+	rating FLOAT,
+	book_id INTEGER NOT NULL,
+	user_id INTEGER NOT NULL,
+	FOREIGN KEY (user_id) REFERENCES users (id),
+	FOREIGN KEY (book_id) REFERENCES books (book_id)
+);
+
+INSERT INTO users VALUES (1, 'adam12', '12345'), (2, 'ben15', 'abcde1234');
+
+SELECT * FROM books LIMIT 25;

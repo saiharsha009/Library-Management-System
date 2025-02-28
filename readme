@@ -1,0 +1,34 @@
+Project Name: Library Managment Sytem
+
+Team Members:
+Kalai Arasi Jayakumar	801388846
+Rajeswari Jayachandran	801376535
+Amrutha Reddy Karumuru	801387628
+Sai Harsha Chapala	801391020
+Sai Adhithi Kesari	801393147
+
+**Programming Language:** Python (3.11)
+
+To run the Project:
+Download our zip file and navigate to the file location
+
+Inorder to run our project you need open two command prompts
+
+1. You must download all the requriment Libraries 
+   run the code in the command prompt
+   `pip install requirements.txt`
+2. You can easily run the project in the python virtual enivornment so you have to open command prompt and run the virtual enivornment intially for the backend.
+
+ --To run the virtual environment run this code in command prompt1
+  `.\Scripts\activate.bat`
+  -- And run the flask app inorder work backend
+  `flask --app app run`
+
+3. Now you have run the frontend in the command prompt2 
+  --Run the virtual enivornment
+  `.\Scripts\activate.bat`
+  After entering the to the environment
+  --now run the code for the streamlit
+  `streamlit run login.py --client.showSidebarNavigation=False`
+
+**Note:** If any required libraries are not installed, use the command `pip install [libraryName]` to install them  
